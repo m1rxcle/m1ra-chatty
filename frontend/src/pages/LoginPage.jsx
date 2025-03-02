@@ -27,8 +27,8 @@ const LoginPage = () => {
 							<div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
 								<MessageSquare className="size-6 text-primary" />
 							</div>
-							<h1 className="text-2xl font-bold mt-2">Welcome Back</h1>
-							<p className="text-base-content/60">Sign in to your account</p>
+							<h1 className="text-2xl font-bold mt-2">Добро пожаловать</h1>
+							<p className="text-base-content/60">Войдите в свой аккаунт</p>
 						</div>
 					</div>
 
@@ -44,7 +44,7 @@ const LoginPage = () => {
 								<input
 									type="email"
 									className={`input input-bordered w-full pl-10`}
-									placeholder="user@test.com"
+									placeholder="Введите свою почту"
 									value={formData.email}
 									onChange={(e) => setFormData({ ...formData, email: e.target.value })}
 								/>
@@ -53,7 +53,7 @@ const LoginPage = () => {
 
 						<div className="form-control ">
 							<label className="label">
-								<span className="label-text font-medium">Password</span>
+								<span className="label-text font-medium">Пароль</span>
 							</label>
 							<div className="relative">
 								<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -78,15 +78,15 @@ const LoginPage = () => {
 									Loading...
 								</>
 							) : (
-								"Enter in your account"
+								"Войти"
 							)}
 						</button>
 					</form>
 					<div className="text-center">
 						<p className="text-base-content/60">
-							Don`t have an account ?{" "}
+							Еще нет аккаунта?{" "}
 							<Link to="/signup" className="link link-primary">
-								Create
+								Зарегистрируйтесь
 							</Link>
 						</p>
 					</div>
@@ -94,7 +94,7 @@ const LoginPage = () => {
 			</div>
 
 			{/* right side */}
-			<AuthImagePattern title="Welcome Back!" subtitle="Sign in to continue your conversation and catch up with your messages." />
+			<AuthImagePattern title="Добро пожаловать!" subtitle="Войдите чтобы продолжить ваши чаты и общаться." />
 		</div>
 	)
 }

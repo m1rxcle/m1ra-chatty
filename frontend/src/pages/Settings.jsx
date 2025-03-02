@@ -3,8 +3,8 @@ import { THEMES } from "../constants"
 import { useThemeStore } from "../store/useThemeStore"
 
 const PREVIEW_MESSAGES = [
-	{ id: 1, content: "Hey! How`s it going?", isSent: false },
-	{ id: 2, content: "I`m doing great!", isSent: true },
+	{ id: 1, content: "Привет! Как дела?", isSent: false },
+	{ id: 2, content: "Все хорошо!", isSent: true },
 ]
 
 const SettingsPage = () => {
@@ -13,8 +13,8 @@ const SettingsPage = () => {
 		<div className="container mx-auto px-4 pt-20 max-w-5xl pb-10">
 			<div className="space-y-6">
 				<div className="flex flex-col gap-1">
-					<h2 className="text-lg font-semibold">Theme</h2>
-					<p className="text-sm text-base-content/70">Choose a theme for your chat</p>
+					<h2 className="text-lg font-semibold">Темы</h2>
+					<p className="text-sm text-base-content/70">Выберите тему для вашего аккаунта</p>
 				</div>
 				<div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 gap-2">
 					{THEMES.sort().map((t, i) => (
@@ -39,7 +39,7 @@ const SettingsPage = () => {
 				</div>
 
 				{/* Preview Section */}
-				<h3 className="text-lg font-semibold mb-3">Preview</h3>
+				<h3 className="text-lg font-semibold mb-3">Просмотр</h3>
 				<div className="rounded-xl border border-base-300 overflow-hidden bg-base-100 shadow-lg">
 					<div className="py-4 bg-base-200">
 						<div className="max-w-lg mx-auto">
@@ -50,8 +50,8 @@ const SettingsPage = () => {
 									<div className="flex items-center gap-3">
 										<div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-content font-medium">J</div>
 										<div>
-											<h3 className="font-medium text-sm">John Doe</h3>
-											<p className="text-xs text-base-content/70">Online</p>
+											<h3 className="font-medium text-sm">Cергей Васькин</h3>
+											<p className="text-xs text-base-content/70">Онлайн</p>
 										</div>
 									</div>
 								</div>
@@ -73,7 +73,7 @@ const SettingsPage = () => {
                             ${message.isSent ? "text-primary-content/70" : "text-base-content/70"}
                           `}
 												>
-													12:00 PM
+													12:00
 												</p>
 											</div>
 										</div>
@@ -87,7 +87,7 @@ const SettingsPage = () => {
 											type="text"
 											className="input input-bordered flex-1 text-sm h-10"
 											placeholder="Type a message..."
-											value="This is a preview"
+											value="Это показ темы"
 											readOnly
 										/>
 										<button className="btn btn-primary h-10 min-h-0">
