@@ -14,11 +14,11 @@ const SignUpPage = () => {
 	})
 	const { signUp, isSigningUp } = useAuthStore()
 	const validateForm = () => {
-		if (!formData.fullName.trim()) return toast.error("Full name is required!")
-		if (!formData.email.trim()) return toast.error("Email is required!")
-		if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Invalid email format!")
-		if (!formData.password) return toast.error("Password is required!")
-		if (formData.password.length < 6) return toast.error("Password must be at least 6 characters")
+		if (!formData.fullName.trim()) return toast.error("Полное имя обязательно!")
+		if (!formData.email.trim()) return toast.error("Почта обязательна!")
+		if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Неправильная формат почты!")
+		if (!formData.password) return toast.error("Пароль обязателен!")
+		if (formData.password.length < 6) return toast.error("Пароль должен быть не менее 6 символов!")
 
 		return true
 	}
